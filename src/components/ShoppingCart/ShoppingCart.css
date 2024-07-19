@@ -1,0 +1,28 @@
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: aqua; */
+    /* width: 80%; */
+}
+.cart-heading {
+    font-weight: 700;
+    /* background-color: blue; */
+}
+.cart-text {
+    /* background-color: blueviolet; */
+    width: 50%;
+}
+.cart-button {
+    color: antiquewhite;
+    background-color: black;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+}
+.cart-button:hover {
+    opacity: 0.8;
+}
+.cart-shopping-cart-icon {
+    /* background-color: brown; */
+    margin-top: 1rem;
+}

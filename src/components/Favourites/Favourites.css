@@ -1,0 +1,28 @@
+.fav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: aqua; */
+    /* width: 80%; */
+}
+.fav-heading {
+    font-weight: 700;
+    /* background-color: blue; */
+}
+.fav-text {
+    /* background-color: blueviolet; */
+    width: 50%;
+}
+.fav-button {
+    color: antiquewhite;
+    background-color: black;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+}
+.fav-button:hover {
+    opacity: 0.8;
+}
+.fav-shopping-cart-icon {
+    /* background-color: brown; */
+    margin-top: 1rem;
+}
