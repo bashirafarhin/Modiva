@@ -44,7 +44,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* when screen size is less this footer links will be shown in this way */}
+            {/* when screen size is less the footer links will be shown in this way */}
             <div className="small-footer">
                 <div className="small-footer-row-container" onClick={() => setOpenRow1(!openRow1)}>
                     <div className={`small-footer-row ${openRow1 ? 'color-footer-red' : ''}`}>
@@ -107,11 +107,6 @@ export default function Footer() {
 
             <div className="brand-social-media-container">
                 <div className="brand-social-media-icons">
-                    {/* <InstagramIcon/>
-                    <XIcon/>
-                    <FacebookIcon/>
-                    <YouTubeIcon/>
-                    <TelegramIcon/> */}
                       <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" className="icon-link">
                 <InstagramIcon />
             </a>

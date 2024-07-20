@@ -41,15 +41,12 @@ export default function Header() {
                 </div>
                 <div className="header-shop-icons" onClick={ () => navigate('/Favourites')} >
                     <div><FavoriteBorderIcon sx={headerShopIcon}/></div>
-                    {/* <div className="header-shop-text">Favourites</div> */}
                 </div>
                 <div className="header-shop-icons" onClick={ () => navigate('/ShoppingCart')}>
                     <div><ShoppingBagOutlinedIcon sx={headerShopIcon}/></div>
-                    {/* <div className="header-shop-text">Shopping</div> */}
                 </div>
                 <div className="header-shop-icons">
                     <div><SearchIcon sx={headerShopIcon}/></div>
-                    {/* <div className="header-shop-text">Search</div> */}
                 </div>
             </div>
         </nav>

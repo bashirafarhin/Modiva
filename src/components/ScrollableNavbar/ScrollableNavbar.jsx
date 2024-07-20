@@ -28,7 +28,6 @@ export default function ScrollableNavbar() {
 
     const handleItemClick = (item) => {
         item=="Sustanability" ? navigate('/Sustanability') : navigate(`/?type=${item}`)
-        // navigate(`/?type=${item}`);
     };
 
     return (

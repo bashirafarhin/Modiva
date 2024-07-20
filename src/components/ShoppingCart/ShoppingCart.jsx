@@ -8,6 +8,7 @@ export default function ShoppingCart(){
     const handleClick = async() => {
         navigate('/');
     }
+    
     return (
         <>
 

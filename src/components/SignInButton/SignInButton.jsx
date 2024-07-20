@@ -37,7 +37,6 @@ export default function SignInButton() {
         onClick={handleClick}
       >
         <div><PermIdentityIcon sx={headerShopIcon}/></div>
-        {/* <div className="header-shop-text">Sign In</div> */}
       </div>
       <Menu
         id="basic-menu"

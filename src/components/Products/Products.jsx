@@ -1,16 +1,15 @@
 import "./Products.css"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useState } from "react";
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import "swiper/css/navigation";
 import { Navigation, Pagination} from 'swiper/modules';
-import ImagesList from './ImagesList.js';
 
 
 export default function Products(){
-    const [filledIndex, setFilledIndex] = useState(null);
+    const [ImagesList, setImagesList] = useState([]);
 
     const handleProductItem = (index) => {
         navigate(`/${type}/${index}/product-page`);
@@ -26,12 +25,58 @@ export default function Products(){
         strokeWidth: 1,
     }
 
-    
+        const getImages = async () => {
+          try {
+            let importedModule;
+            switch (type) {
+              case 'Ladies':
+                importedModule = await import("../Data/Ladies.js");
+                break;
+              case 'Men':
+                importedModule = await import("../Data/Men.js");
+                break;
+              case 'Kids':
+                importedModule = await import("../Data/Kids.js");
+                break;
+              case 'Baby':
+                importedModule = await import("../Data/Baby.js");
+                break;
+              case 'Games':
+                importedModule = await import("../Data/Games.js");
+                break;
+              case 'Jewellery':
+                importedModule = await import("../Data/Jewellery.js");
+                break;
+              case 'MakeUp':
+                importedModule = await import("../Data/MakeUp.js");
+                break;
+              case 'SkinCare':
+                importedModule = await import("../Data/SkinCare.js");
+                break;
+              case 'Sport':
+                importedModule = await import("../Data/Sport.js");
+                break;
+              default:
+                navigate('/');
+                return;
+        }
+        setImagesList(importedModule.default);
+
+          } catch (error) {
+            navigate('/');
+          }
+        };
+
+
+    if(ImagesList.length==0){
+        getImages();
+    }
+
 
     return (
         <div className="products-container">
             { 
-              ImagesList[`${type}`].map((ImgObj, index) => (
+              ImagesList.map((ImgObj, index) => (
                <div key={index} className="product-item">
                  <div className="product-image" onClick={ () => handleProductItem(index)}>
                   <Swiper
