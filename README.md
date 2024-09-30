@@ -24,4 +24,4 @@ To run this project locally, follow these steps:
  `npm install`
 3. Start the application:
  `npm start`
-Feel free to adjust any part to better match your project details!
+### Feel free to adjust any part to better match your project details!
