@@ -7,12 +7,12 @@ This project is a responsive clothing store website inspired by H&M. It is built
  1. HTML: For structuring the content.
  2. CSS: For styling and layout.
  3. React: For building interactive user interfaces.
- 4. 
+
 ## Performance Note
 Please note that the website may appear slow, as it was developed before I learned about using Redux for state management.
 
 ## Demo
-Visit the project here (add your demo link).
+Visit the project here (https://modiva-web.netlify.app/).
 
 ## Installation
 To run this project locally, follow these steps:
